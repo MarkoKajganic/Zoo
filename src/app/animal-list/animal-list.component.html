@@ -20,6 +20,9 @@
     <td>{{ animal.name }}</td>
     <td *ngIf="!animal.dateOfBirth"> Unknown </td>
     <td *ngIf="animal.dateOfBirth">{{ animal.dateOfBirth }}</td>
+    <td>
+      <button class="btn btn-danger" (click)="removeAnimal(animal)"> X </button>
+  </td>
 
 
   </tr>
