@@ -18,7 +18,8 @@
 
     <td>{{ animal.species }}</td>
     <td>{{ animal.name }}</td>
-    <td>{{ animal.dateOfBirth }}</td>
+    <td *ngIf="!animal.dateOfBirth"> Unknown </td>
+    <td *ngIf="animal.dateOfBirth">{{ animal.dateOfBirth }}</td>
 
 
   </tr>
