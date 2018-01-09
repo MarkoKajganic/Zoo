@@ -1,11 +1,18 @@
-<p>
-  animal-list works!
-</p>
+<form>
+Species:<br>
+ <input type="text" name="species" [(ngModel)]="newAnimal.species"> <br>
+Name of Animal:<br>
+ <input type="text" name="name" [(ngModel)]="newAnimal.name"><br>
+Date of Birth:<br>
+ <input type="text" name="dateOfBirth" [(ngModel)]="newAnimal.dateOfBirth"> <br>
+
+ <button (click) = "addAnimal()" class="btn btn-success">Add animal</button>
+
+</form><br>
+
 
 <table class="table table">
-
   <thead>
-
     <tr>
       <th>Species</th>  
       <th>Name</th>

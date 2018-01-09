@@ -9,6 +9,7 @@ import { Animal } from '../models/animal';
 export class AnimalListComponent implements OnInit {
 
   animals: Array<Object>;
+  newAnimal = {};
 
   constructor() { 
     this.animals = [
@@ -35,7 +36,11 @@ export class AnimalListComponent implements OnInit {
   let index = this.animals.indexOf(animal);
   this.animals.splice(index, 1);
   this.animals.unshift(animal);
+ }
 
+ addAnimal(newAnimal)
+ {
+   this.animals.push(this.newAnimal);
  }
 
   ngOnInit() {
